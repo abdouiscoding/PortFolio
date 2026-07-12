@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +14,7 @@ body {
   --nav: #444;
   --head: #555;
   --border: #444;
+  --hover: #e0e0e0;
 }
 
 body.dark-mode {
@@ -18,6 +23,7 @@ body.dark-mode {
   --nav: #ddd;
   --head: #eee;
   --border: #ddd;
+  --hover: #4d4d4d;
 }
 
 body {
@@ -26,9 +32,14 @@ body {
   padding: 10px;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 nav {
   border-radius:0.5rem;
-  display: flex;
   flex-direction: column;
   background: var(--nav);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,7 +55,23 @@ nav ul {
 }
 
 nav li {
+  text-align: center;
+}
+
+nav li:hover {
   cursor: pointer;
+  color: var(--hover);
+}
+
+nav div {
+  display: flex;
+  align-items: center; 
+  gap: 0.5rem;         
+}
+
+nav div:hover {
+  cursor: pointer;
+  color: var(--hover);
 }
 
 #main {
@@ -196,13 +223,18 @@ nav li {
   border-radius: .5rem;
 }
 
-a {
+#projects a {
   color: rgb(143, 143, 143);
   text-decoration: none;
 }
 
-a:hover {
+#projects a:hover {
   color: rgb(182, 182, 182);
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .Technologies {

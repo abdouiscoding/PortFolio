@@ -27,15 +27,15 @@ function App() {
       RepoLink: "https://github.com/abdouiscoding/HoloRoom" }
   ]);
   console.log(pfp);
-  const [mode, setMode] = useState("dark");
+  const [mode, setMode] = useState("Dark");
 
   function switchMode() {
-    if (mode === "dark") {
+    if (mode === "Dark") {
       document.body.classList.add("dark-mode");
-      setMode("light");
+      setMode("Light");
     } else {
       document.body.classList.remove("dark-mode");
-      setMode("dark");
+      setMode("Dark");
     }
   }
 
@@ -50,11 +50,12 @@ function App() {
     <header>
     <nav>
       <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
         <div onClick={switchMode}>
-          <Sun />
+           <Sun />
+          <span>{mode} Mode</span>
         </div>
       </ul>
     </nav>
@@ -65,7 +66,7 @@ function App() {
           <img src={pfp} alt="Profile Picture" />
         </div>
         <div className="rightbox">
-          <h1>Hi, I'm Abderrahim Ferdi a Sofware engineer</h1>
+          <h1>Hi, I'm Abderrahim Ferdi, a Sofware engineer</h1>
           <h3>I’m a Software Engineer with a passion for developing modern web applications. I enjoy solving problems, writing clean code, and creating responsive, user-friendly experiences while continuously expanding my skills through personal projects.</h3>
         </div>
       </div>  
@@ -96,7 +97,7 @@ function App() {
             <div className="Technologies">
               <h3>Technologies used are:</h3>
               {project.Technologies.map((tech, techindex)=> (
-                <div class key={techindex}>{tech}</div>
+                <div key={techindex}>{tech}</div>
               ))}
             </div>
             <a target="_blank" id="RepoLink" href={project.RepoLink} >
