@@ -2,6 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import pfp from './assets/pfp.jpg'
+import HoloRoomHome from "./assets/HoloRoomHome.png";
+import HoloRoom from "./assets/HoloRoom.png";
+import HoloRoomDashboard from "./assets/HoloRoomDashBoard.png";
+import HoloRoomAR from "./assets/HoloRoomAR.jpg";
 import './App.css'
 import { Sun } from 'lucide-react'
 
@@ -9,20 +13,18 @@ function App() {
   const [imagepopup, setImagePopup] = useState(true);
   const [zoomedimage, setZoomedimage] = useState('');
   const [Projects, setProjects] = useState([
-    { images:["/src/assets/HoloRoomHome.png","/src/assets/HoloRoom.png","/src/assets/HoloRoomDashBoard.png","/src/assets/HoloRoomAR.jpg"] , 
+    { images: [
+      HoloRoomHome,
+      HoloRoom,
+      HoloRoomDashboard,
+      HoloRoomAR
+    ],
       name: "HoloRoom", 
       description: "HoloRoom is a collaborative furniture and décor shopping platform developed by Abderahim Ferdi, Guermache Ayoub, and Benabderrahmane Anis. It combines e-commerce with an interactive AR experience, allowing users to place virtual furniture and decorations in their own space before making a purchase. The platform also includes an AI assistant that supports both text and voice conversations, with voice interaction available directly in AR mode for a more immersive experience.", 
       registrationdisabled: true,
       demoLink: "https://holoroom-front.vercel.app",
       Technologies: ["React", "Three.js", "WebXr", "SpringBoot", "MYSQL"],
-      RepoLink: "https://github.com/abdouiscoding/HoloRoom" },
-    { images: ["./assets/Project2.png"], 
-      name: "Project 2", 
-      description: "Description of Project 2", 
-      demoLink: "https://holoroom-front.vercel.app",
-      registrationdisabled: false,
-      Technologies: ["React", "Three.js", "WebXr", "SpringBoot", "MYSQL"],
-      RepoLink: "https://github.com/username/project2" },
+      RepoLink: "https://github.com/abdouiscoding/HoloRoom" }
   ]);
   console.log(pfp);
   const [mode, setMode] = useState("dark");
