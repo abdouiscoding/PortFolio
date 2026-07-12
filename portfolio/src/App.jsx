@@ -10,7 +10,7 @@ import './App.css'
 import { Sun } from 'lucide-react'
 
 function App() {
-  const [imagepopup, setImagePopup] = useState(true);
+  const [imagepopup, setImagePopup] = useState(false);
   const [zoomedimage, setZoomedimage] = useState('');
   const [Projects, setProjects] = useState([
     { images: [
@@ -106,6 +106,12 @@ function App() {
           </div>
         ))}
       </div>
+    </div>
+    <div id="about">
+      <h1>About Me</h1>
+    </div>
+    <div id="contact">
+      <h1>Contact Me</h1>
     </div>
     {imagepopup && (
       <div className="Overlay" onClick={()=>setImagePopup(false)}>
