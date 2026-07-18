@@ -6,8 +6,14 @@ import HoloRoomHome from "./assets/HoloRoomHome.png";
 import HoloRoom from "./assets/HoloRoom.png";
 import HoloRoomDashboard from "./assets/HoloRoomDashBoard.png";
 import HoloRoomAR from "./assets/HoloRoomAR.jpg";
+import TextAnalyser from "./assets/TextAnalyser.png";
 import './App.css'
-import { Sun } from 'lucide-react'
+import {
+  Sun,
+  Mail
+} from "lucide-react";
+import { FaGithub, FaLinkedin, FaFileAlt, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 function App() {
   const [imagepopup, setImagePopup] = useState(false);
@@ -24,7 +30,24 @@ function App() {
       registrationdisabled: true,
       demoLink: "https://holoroom-front.vercel.app",
       Technologies: ["React", "Three.js", "WebXr", "SpringBoot", "MYSQL"],
-      RepoLink: "https://github.com/abdouiscoding/HoloRoom" }
+      RepoLink: "https://github.com/abdouiscoding/HoloRoom" 
+    },
+    { images: [
+      TextAnalyser
+    ],
+    name: "Multithreaded Text Analyzer",
+    description: "Multithreaded Text Analyzer is a desktop application developed by Abderrahim Ferdi. It analyzes multiple text files concurrently using multithreading while keeping the interface responsive. The application provides real-time progress tracking, word frequency statistics, unique word detection, and sentiment analysis, allowing users to efficiently process and analyze large collections of text files.",
+    Technologies: [
+      "Java",
+      "JavaFX",
+      "Threads",
+      "ExecutorService",
+      "Stanford CoreNLP"
+    ],
+    demoLink: "none",
+    RepoLink: "https://github.com/abdouiscoding/MiltiThread-File-Scanner" 
+
+  }
   ]);
   console.log(pfp);
   const [mode, setMode] = useState("Dark");
@@ -51,7 +74,7 @@ function App() {
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <div onClick={switchMode}>
            <Sun />
@@ -76,7 +99,7 @@ function App() {
       <div className="project-list">
         {Projects.map((project, index) => (
           <div className="project-card" key={index}>
-            <div className="Images">
+            <div className={`Images ${project.images.length === 1 ? "single" : ""}`}>
               {project.images.map((img, imgIndex) => (
                 <img onClick={()=>{zoomimage(img)}} key={imgIndex} src={img} alt={`${project.name}`} />
               ))}
@@ -84,7 +107,7 @@ function App() {
             <div className="project-info">
             <h2>{project.name}</h2>
             <p>{project.description}</p>
-            <div className="demo">
+            <div className={`demo ${project.demoLink === "none" ? "noLink" : ""}`}>
               {project.registrationdisabled && (
                 <>
                 <p>Demo Account: Registration is currently disabled. To explore the AR experience and other features, use:</p>
@@ -110,9 +133,35 @@ function App() {
     </div>
     <div id="about">
       <h1>About Me</h1>
+      <div>-Full Name: Abderrahim Ferdi</div> 
+      <div>-Location: Constantine, Algeria</div>
+      <div>-Education: Bachelor Degree in software engineering</div>
+      <div>-Status: Software Engineering Masters Student</div>
+      <div>-Languages: Arabic (Native), English (Fluent), French (Below-Average)</div>
+      <div>-Technologies: React, SpringBoot, MySql, Java</div>
+      <div>-Interests: Web Development, Problem Solving</div>
+      <div>-Currently Learning: Docker</div>
+      <div>-Open to: Internships / Freelance / Full-time opportunities</div>
+      <div>-Resume link: not done yet!</div>
     </div>
     <div id="contact">
       <h1>Contact Me</h1>
+      <div className='contacts'>
+        <MdEmail/>
+        <span> abderrahimferdi.work@gmail.com</span>
+      </div>
+      <div className='contacts'>
+        <FaGithub/>
+        <span> https://github.com/abdouiscoding</span>
+      </div>
+      <div className='contacts'>
+        <FaLinkedin/>
+        <span> Not Yet</span>
+      </div>
+      <div className='contacts'>
+        <FaInstagram/>
+        <span> Not Yet</span>
+      </div>
     </div>
     {imagepopup && (
       <div className="Overlay" onClick={()=>setImagePopup(false)}>
