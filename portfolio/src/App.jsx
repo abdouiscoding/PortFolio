@@ -108,7 +108,7 @@ function App() {
             <div className={`demo ${project.demoLink === "none" ? "noLink" : ""}`}>
               {project.registrationdisabled && (
                 <>
-                <p>Demo Account: Registration is currently disabled. To explore the AR experience and other features, use:</p>
+                <p>Demo Account: Feel free to use this account to explore arround the app without the need to create an account and To explore the AR experience and other features, use:</p>
                 <p>Email: teacher@account.com</p>
                 <p>Password: teacher</p>
                 </>
@@ -136,11 +136,10 @@ function App() {
       <div>-Education: Bachelor Degree in software engineering</div>
       <div>-Status: Software Engineering Masters Student</div>
       <div>-Languages: Arabic (Native), English (Fluent), French (Below-Average)</div>
-      <div>-Technologies: React, SpringBoot, MySql, Java</div>
+      <div>-Technologies: React, SpringBoot, MySql, PostgreSQL, Java, Python</div>
       <div>-Interests: Web Development, Problem Solving</div>
       <div>-Currently Learning: Docker</div>
-      <div>-Open to: Internships / Freelance / Full-time opportunities</div>
-      <div>-Resume link: not done yet!</div>
+      <div>-Open to: Internships / Freelance / Part-time opportunities</div>
     </div>
     <div id="contact">
       <h1>Contact Me</h1>
@@ -154,11 +153,11 @@ function App() {
       </div>
       <div className='contacts'>
         <FaLinkedin/>
-        <span> Not Yet</span>
+        <span> Not Added Yet</span>
       </div>
       <div className='contacts'>
         <FaInstagram/>
-        <span> Not Yet</span>
+        <span> Not Added Yet</span>
       </div>
     </div>
     {imagepopup && (
