@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import pfp from './assets/pfp.jpg'
+import pfp from './assets/pfp.jfif'
 import HoloRoomHome from "./assets/HoloRoomHome.png";
 import HoloRoom from "./assets/HoloRoom.png";
 import HoloRoomDashboard from "./assets/HoloRoomDashBoard.png";
