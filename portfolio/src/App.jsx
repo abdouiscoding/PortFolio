@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import pfp from './assets/pfp.jfif'
+import pfp from './assets/pfp.png'
 import HoloRoomHome from "./assets/HoloRoomHome.png";
 import HoloRoom from "./assets/HoloRoom.png";
 import HoloRoomDashboard from "./assets/HoloRoomDashBoard.png";
