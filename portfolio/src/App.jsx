@@ -108,6 +108,7 @@ function App() {
             <div className={`demo ${project.demoLink === "none" ? "noLink" : ""}`}>
               {project.registrationdisabled && (
                 <>
+                <p>Note: The backend is ran on render so it might take a minute or two to load.</p>
                 <p>Demo Account: Feel free to use this account to explore arround the app without the need to create an account and To explore the AR experience and other features, use:</p>
                 <p>Email: teacher@account.com</p>
                 <p>Password: teacher</p>
